@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
-public final class FileUtils implements AutoCloseable {
+public final class FileUtils {
     private FileUtils() {
     }
 
@@ -15,10 +15,6 @@ public final class FileUtils implements AutoCloseable {
 
     public static boolean exists(String path) {
         return exists(new File(path));
-    }
-
-    @Override
-    public void close() throws Exception {
     }
 
     public static List<String> readAll(File path) throws IOException {
@@ -37,12 +33,10 @@ public final class FileUtils implements AutoCloseable {
 
     public static void writeAll(String path, List<String> lines) throws IOException {
         if (!exists(path)) throw new FileNotFoundException("File doesn`t exist");
-        try (BufferedWriter bf = new BufferedWriter(new FileWriter(path))) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
             ListIterator<String> iter = lines.listIterator();
             while (iter.hasNext())
-                bf.write(iter.next());
-        } catch (IOException e) {
-            e.printStackTrace();
+                bw.write(iter.next());
         }
     }
 }
