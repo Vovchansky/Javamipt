@@ -8,16 +8,14 @@ import java.util.List;
 import java.util.Map;
 
 public class Main {
-
     public static void main(String[] args) throws FileNotFoundException {
         List<String> lines = new ArrayList<>();
-        List<String> words = new ArrayList<>();
         try (FileIterator File = new FileIterator("src/com/company/words")) {
             String lineFromWords = File.next();
             String[] separatedLine = lineFromWords.split(" ");
             int linesLength = RandomUtils.generateNumber();
             int counter = 0;
-            while (counter < linesLength) {
+            while (counter < separatedLine.length) {
                 lines.add(separatedLine[counter]);
                 counter++;
             }
@@ -25,7 +23,7 @@ public class Main {
             System.err.println(e);
             throw new FileNotFoundException("File doesn`t exist");
         }
-        words = RandomUtils.generateStringArrayFrom(lines);
+        List<String> words = RandomUtils.generateStringArrayFrom(lines);
         int[] numbers = RandomUtils.generateIntArray();
         Map randomMap = new HashMap();
         if (numbers.length > words.size()) {
