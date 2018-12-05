@@ -1,46 +1,40 @@
 package com.company;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Main {
 
-    public static void main(String[] args) {
-        String[] Words = new String[RandomUtils.generateNumber()];
-        System.out.println();
+    public static void main(String[] args) throws FileNotFoundException {
+        List<String> lines = new ArrayList<>();
+        List<String> words = new ArrayList<>();
         try (FileIterator File = new FileIterator("src/com/company/words")) {
+            String lineFromWords = File.next();
+            String[] separatedLine = lineFromWords.split(" ");
+            int linesLength = RandomUtils.generateNumber();
             int counter = 0;
-            String Line = File.next();
-            String[] Lines = Line.split(";");
-            while (counter < Words.length) {
-                Words[counter] = Lines[counter];
+            while (counter < linesLength) {
+                lines.add(separatedLine[counter]);
                 counter++;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println(e);
+            throw new FileNotFoundException("File doesn`t exist");
         }
-        int[] a = RandomUtils.generateArrayOf(RandomUtils.generateNumber());
-        Map RandomMap;
-        if (a.length > Words.length) {
-            RandomMap = new HashMap<int[], String>();
-            for (int i = 0; i < a.length; i++) {
-                if (i >= Words.length) {
-                    RandomMap.put(a[i], null);
-                } else {
-                    RandomMap.put(a[i], Words[i]);
-                }
-            }
+        words = RandomUtils.generateStringArrayFrom(lines);
+        int[] numbers = RandomUtils.generateIntArray();
+        Map randomMap = new HashMap();
+        if (numbers.length > words.size()) {
+            for (int i = 0; i < numbers.length; i++)
+                randomMap.put(numbers[i], (i < words.size()) ? words.get(i) : null);
         } else {
-            RandomMap = new HashMap<String, int[]>();
-            for (int i = 0; i < Words.length; i++) {
-                if (i >= a.length) {
-                    RandomMap.put(Words[i], null);
-                } else {
-                    RandomMap.put(Words[i], a[i]);
-                }
-            }
+            for (int i = 0; i < words.size(); i++)
+                randomMap.put(words.get(i), (i < numbers.length) ? numbers[i] : null);
         }
-        RandomMap.forEach((k, v) -> System.out.println(k + ": " + v));
+        randomMap.forEach((k, v) -> System.out.println(k + ": " + v));
     }
 }
