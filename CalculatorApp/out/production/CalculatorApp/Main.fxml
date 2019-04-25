@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="MainController">
+    <center>
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #DCDCDC; -fx-border-color: #DCDCDC;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="one" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#oneClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="1" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clear" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#clearClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="C" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="point" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#pointClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="." textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="zero" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#zeroClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="0" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="two" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#twoClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="2" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="three" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#threeClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="3" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="nine" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#nineClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="9" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="eight" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#eightClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="8" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="seven" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sevenClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="7" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="six" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#sixClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="6" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="five" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fiveClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="5" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="four" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#fourClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #DCDCDC;" text="4" textAlignment="JUSTIFY" textFill="DARKSLATEGRAY" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+            </children>
+        </GridPane>
+    </center>
+    <top>
+        <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #000000;">
+                    <children>
+                        <Label fx:id="label" alignment="BOTTOM_RIGHT" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="400.0" style="-fx-background-color: rgba(0,0,0,0);" textAlignment="JUSTIFY" textFill="WHITE">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="textField" alignment="BASELINE_RIGHT" editable="false" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="400.0" style="-fx-background-color: rgba(0,0,0,0); -fx-font-color: #FFFFFF;">
+                            <font>
+                                <Font name="Arial" size="40.0" />
+                            </font>
+                            <padding>
+                                <Insets right="1.0" />
+                            </padding>
+                        </TextField>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #F0FFFF;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="equal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#equalClick" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #FF8C00;" text="=" textAlignment="JUSTIFY" textFill="AZURE">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Button>
+            </children>
+        </GridPane>
+    </bottom>
+    <right>
+        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="100.0" style="-fx-background-color: #FF8C00; -fx-border-color: #FF8C00;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="100.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="divide" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#divideClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FF8C00;" text="/" textAlignment="JUSTIFY" textFill="AZURE">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="multiply" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#multiplyClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FF8C00;" text="X" textAlignment="JUSTIFY" textFill="AZURE" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="minus" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#minusClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FF8C00;" text="-" textAlignment="JUSTIFY" textFill="AZURE" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+                <Button fx:id="plus" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#plusClick" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: #FF8C00;" text="+" textAlignment="JUSTIFY" textFill="AZURE" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Arial" size="36.0" />
+                    </font>
+                </Button>
+            </children>
+        </GridPane>
+    </right>
+</BorderPane>
